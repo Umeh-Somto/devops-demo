@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, jsonify
 
 
@@ -6,7 +8,7 @@ def create_app():
 
     @app.get("/")
     def index():
-        return jsonify(message="Hello from devops-demo")
+        return jsonify(message="Hello from devops-demo", env=os.getenv("APP_ENV", "dev"))
 
     @app.get("/health")
     def health():

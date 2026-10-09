@@ -22,4 +22,3 @@ def test_index_returns_message(client):
 
 def test_unknown_route_returns_404(client):
     assert client.get("/nope").status_code == 404
-    

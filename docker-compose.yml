@@ -1,5 +1,6 @@
 services:
   app:
+    image: ${DOCKERHUB_USERNAME}/devops-demo:latest
     build: .
     env_file: .env
     expose:
